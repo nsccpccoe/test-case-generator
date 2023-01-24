@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { default: test } = require('node:test');
 
 for(let i=0;i<15;i++)
 {
@@ -39,6 +40,8 @@ for(let i=0;i<15;i++)
     {
         let n= getRandomIntInclusive(1,remain-(t-i)+1);
         remain-=n;
+        let k=getRandomIntInclusive(1,n-1);
+        let f=getRandomIntInclusive(1,n-1);
         let test_case = [];
         for(let j=0;j<n;j++)
         {
@@ -46,15 +49,16 @@ for(let i=0;i<15;i++)
             test_case.push(temp);
         }
         let tests = [n];
+        tests.push(k);
+        tests.push(f);
+        tests=tests.join(" ");
         test_case=test_case.join(" ");
         let final = [tests,test_case];
         final=final.join("\n");
         bbb.push(final);
         // console.log(final);
     }
-    
-
-    
+  
     // test_case = [test_case.length, ...test_case];
     
     fs.writeFileSync(`./input/input${fileIndex}.txt`, bbb.join("\n"));
