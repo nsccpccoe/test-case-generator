@@ -5,9 +5,9 @@ using namespace std;
 
 int main() {
 
-    string folder = "./true-cop/";
+    string folder = "./color-fill/";
     string program = folder + "program.cpp";
-    int N = 15;
+    int N = 20;
 
     for(int i = 0; i <= N; ++i) {
         string number = "00" + to_string(i);
@@ -16,9 +16,9 @@ int main() {
         string outputfile = folder + "output/output" + number + ".txt";
 
         string gpp = "g++ ";
-        string binf = " -o temp && temp.exe < ";
+        string binf = " -o temp && ./temp < ";
         string pipe = " > ";
-        string del = " && del temp.exe";
+        string del = " && rm temp";
 
         string cmds = gpp + program + binf + inputfile + pipe + outputfile + del;
         system(cmds.c_str());

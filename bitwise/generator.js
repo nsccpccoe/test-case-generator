@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-for(let i=0;i<15;i++)
+for(let i=0;i<=20;i++)
 {
     const index = "00" +i;
     const fileIndex= index.substring(index.length-2);    
