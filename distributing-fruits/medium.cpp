@@ -28,7 +28,7 @@ int main()
     {
         ll n, k;
         cin >> n >> k;
-        // assert(n > 0 && k > 0 && n <= (ll)(1e5) && k <= (ll)(1e14));
+        // assert(n > 0 && k > 0 && n <= (ll)(1e6) && k <= (ll)(1e14));
         cout << (NfactorialDivisibleByK(n, k) ? "YES" : "NO") << '\n';
     }
 }
