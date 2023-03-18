@@ -5,9 +5,9 @@ using namespace std;
 
 int main() {
 
-    string folder = "./color-fill/";
+    string folder = "./faulty-printer/";
     string program = folder + "program.cpp";
-    int N = 20;
+    int N = 22;
 
     for(int i = 0; i <= N; ++i) {
         string number = "00" + to_string(i);
